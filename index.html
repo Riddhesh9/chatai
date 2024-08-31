@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Chat Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <aside>
+            <h1 id="app-title" class="retro-logo">ChatAI</h1>
+            <button id="new-chat">New Chat</button>
+            <ul id="chat-list"></ul>
+        </aside>
+        <main id="chat-window" role="main">
+            <div id="messages"></div>
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button type="submit">Send</button>
+            </form>
+            <div class="char-limit-control">
+                <label for="main-char-limit">Character Limit:</label>
+                <input type="range" id="main-char-limit" min="50" max="2000" step="50" value="500">
+                <span id="main-char-limit-value">500</span>
+            </div>
+        </main>
+        <aside id="context-panel">
+            <h2>Contextual Questions</h2>
+            <div id="highlighted-text"></div>
+            <form id="context-form">
+                <input type="text" id="context-input" placeholder="Ask a question about the highlighted text">
+                <button type="submit">Ask</button>
+            </form>
+            <div class="char-limit-control">
+                <label for="context-char-limit">Character Limit:</label>
+                <input type="range" id="context-char-limit" min="50" max="2000" step="50" value="500">
+                <span id="context-char-limit-value">500</span>
+            </div>
+            <ul id="context-list"></ul>
+        </aside>
+    </div>
+    <div class="dark-mode-toggle">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span class="mode-text">Light</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
