@@ -37,7 +37,7 @@ const contextCharLimit = document.getElementById('context-char-limit');
 const contextCharLimitValue = document.getElementById('context-char-limit-value');
 
 // OpenAI API Key (replace with your actual key)
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = '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';
 
 // Current chat ID
 let currentChatId = null;
